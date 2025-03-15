@@ -44,7 +44,7 @@ MAX_WATER_LEVEL = max(map(max, area))
 MIN_WATER_LEVEL = min(map(min, area))
 
 # 수위의 최소값과 최대값 구해서 for문 돌리기
-for water in range(MIN_WATER_LEVEL, MAX_WATER_LEVEL):
+for water in range(MIN_WATER_LEVEL, MAX_WATER_LEVEL): # 최대값은 어차피 잠기니까 포함 X
     COUNT = 0
     check_area = [[False] * N for _ in range(N)]  # 체크 리스트 초기화
     for i in range(N):
