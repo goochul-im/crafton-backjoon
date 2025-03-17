@@ -1,4 +1,3 @@
-import copy
 import sys
 
 prob = list(map(int, sys.stdin.read().split()[1:]))

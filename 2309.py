@@ -1,3 +1,4 @@
+# 일곱 난쟁이
 import sys
 
 prob = list(map(int, sys.stdin.read().split()))
