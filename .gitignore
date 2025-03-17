@@ -8,3 +8,5 @@
 !**/*.py
 
 .autocp
+
+.venv/*
