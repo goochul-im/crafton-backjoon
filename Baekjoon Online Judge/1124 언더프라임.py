@@ -1,5 +1,4 @@
 # 1124 언더프라임
-# 시간초과 남...
 import sys
 
 st, e = map(int, sys.stdin.readline().split())
