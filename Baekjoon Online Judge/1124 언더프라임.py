@@ -14,24 +14,25 @@ def get_prime_list(end: int):
             for j in range(i * i, end + 1, i):
                 prime_list[j] = False
 
-    return [idx for idx, value in enumerate(prime_list) if value is True and value < int(end ** 0.5) + 1]
+    return prime_list
 
 
 def under_prime(start: int, end: int):
     prime_list = get_prime_list(end)
+    integer_prime_list = [idx for idx, val in enumerate(prime_list) if val is True and val <= int(end ** 0.5) + 1]
 
     count = 0
     for s in range(start, end + 1):
         prime_count = 1
-        while s not in prime_list:
-            for i in prime_list:
+        while prime_list[s] is False:
+            for i in integer_prime_list:
                 if i >= s:
                     break
                 if s % i == 0:
                     prime_count += 1
                     s //= i
                     break
-        if prime_count in prime_list:
+        if prime_list[prime_count]:
             count += 1
 
     print(count)
