@@ -7,6 +7,7 @@ import java.io.*;
 class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         char[] prob = br.readLine().toCharArray();
         String[] line = br.readLine().split(" ");
@@ -37,7 +38,10 @@ class Main {
                 answer -= arr[start - 1][find];
             }
 
-            System.out.println(answer);
+            bw.write(answer + "\n");
         }
+
+        bw.flush();
+        bw.close();
     }
 }
